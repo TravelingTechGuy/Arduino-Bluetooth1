@@ -31,10 +31,10 @@ Client
 For a bluetooth client, you could use one of the following:
 
 1. The Serial Monitor in the Arduino IDE - make sure you dial it to the right baud rate.
-2. On Mac or Linux, `screen <deviceid> <baud rate>`
+2. On Mac or Linux, use Screen: `screen <deviceid> <baud rate>`
  - the device id would look like /dev/tty.HC-05 - try `ls /dev/tty.*` to find your device.
-3. On Android, look for "Arduino Bluetooth Terminal" in the Play store.
-4. On Windows machines, TerTerm, or even putty
+3. On Android, look for "Arduino Bluetooth Terminal" in the [Play store](https://play.google.com/store/apps/details?id=arduino.bluetooth.terminal&hl=en).
+4. On Windows machines, [TeraTerm](http://ttssh2.sourceforge.jp/index.html.en), or [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Comments
 --------
