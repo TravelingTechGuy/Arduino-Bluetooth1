@@ -18,7 +18,7 @@ Components
 1. Arduino Uno R3 (or similar)
 2. 2 LEDs, one red, one green (or choose your own colors)
 3. HC-05 bluetooth module (~$10 on Amazon, less on eBay)
-![HC-05](https://github.com/TravelingTechGuy/Arduino-Bluetooth1/blob/master/HC-05.jpg)
+![HC-05](https://raw.githubusercontent.com/TravelingTechGuy/Arduino-Bluetooth1/master/HC-05.jpg)
 4. Mini breadboard
 5. A couple of jumper cables
 
