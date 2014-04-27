@@ -1,7 +1,7 @@
-Arduino Bluetooth communication example
-=======================================
+Arduino Bluetooth example
+=========================
 
-This is my first Arduino bluetooth project, using the Bluetooth.
+This is my first Arduino bluetooth project, using the Bluetooth HC-05 module.
 
 Operation
 ---------
@@ -16,7 +16,7 @@ Video: [A short YouTube video](https://www.youtube.com/watch?v=YswK21ztCtc) show
 Components
 ----------
 1. Arduino Uno R3 (or similar)
-2. 2 LEDs, one red, one green (or choose your own)
+2. 2 LEDs, one red, one green (or choose your own colors)
 3. HC-05 bluetooth module (~$10 on Amazon, less on eBay)
 4. Mini breadboard
 5. A couple of jumper cables
