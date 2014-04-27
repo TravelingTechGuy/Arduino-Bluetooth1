@@ -38,8 +38,6 @@ For a bluetooth client, you could use one of the following:
 
 Comments
 --------
-1. The board's pairing code is **'1234'**, not the usual '0000' - requires another manual step on a Mac
+1. The board's pairing code is **'1234'**, not the usual '0000' - requires another manual step on a Mac.
 2. While you can set the baud rate to 115200, I did not really need it for this project (since I send one character).
 3. For some reason, the Arduino Bluetooth Terminal on Android did not send any data when the baud rate was set to 115200.
-4. If you intend to use the IDE's serial monitor, make sure the `Serial.begin()` uses the same baud rate as `bluetooth.begin()` to see debug messages.
- 
