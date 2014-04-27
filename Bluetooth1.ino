@@ -2,41 +2,45 @@
 #define RED 10
 #define GREEN 11
 #define BAUD 9600
+#define RX 0
+#define TX 1
 
-SoftwareSerial bluetooth(0, 1); // RX, TX
-int BluetoothData;
+SoftwareSerial bluetooth(RX, TX); // RX, TX
+char bluetoothData;
+char *instructions = "Available commands:\n1 - Red On\n2 - Green On\n0 - Both Off";
 
 void setup() {
-  // put your setup code here, to run once:
   bluetooth.begin(BAUD);
-  Serial.begin(BAUD);
+  bluetooth.println("Ready!");
+  bluetooth.println(instructions);
   pinMode(RED, OUTPUT);
   pinMode(GREEN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-   if (bluetooth.available())
-   {
-     BluetoothData=bluetooth.read();
-     
-     switch(BluetoothData) {
-       case '0':
-         Serial.println("Both Off");
-         digitalWrite(RED, LOW);
-         digitalWrite(GREEN, LOW);
-         break;
-       case '1':
-         Serial.println("Red On");
-         digitalWrite(RED, HIGH);
-         break;
-       case '2':
-         Serial.println("Green On");
-         digitalWrite(GREEN, HIGH);
-         break;
-       default:
-         break;
-     }
-   }
-   delay(100);
+  if (bluetooth.available())
+  {
+    bluetoothData = bluetooth.read();
+    switch (bluetoothData) {
+      case '0':
+        bluetooth.println("Both Off");
+        digitalWrite(RED, LOW);
+        digitalWrite(GREEN, LOW);
+        break;
+      case '1':
+        bluetooth.println("Red On");
+        digitalWrite(RED, HIGH);
+        break;
+      case '2':
+        bluetooth.println("Green On");
+        digitalWrite(GREEN, HIGH);
+        break;
+      default:
+        if (bluetoothData > ' ') { //ignore unprintable characters, below a space
+          bluetooth.println(instructions);
+        }
+        break;
+    }
+  }
+  delay(100);
 }
